@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on November 01, 2023, at 14:44
+    on November 01, 2023, at 17:10
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -106,7 +106,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Silver\\Box\\psychopy_git_masters\\PLOT_relative\\plot_relative.py',
+        originPath='C:\\Users\\Silver\\Box\\psychopy_git_masters\\PLOT_scan\\plot_relative.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -319,6 +319,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         depth=0.0);
     
     # --- Initialize components for Routine "plot_trials" ---
+    key_resp = keyboard.Keyboard()
     # Run 'Begin Experiment' code from code
     #hide mouse
     mouse = event.Mouse(visible=False)
@@ -327,27 +328,27 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         start=(-[1.0, 1.0][0]/2.0, 0), end=(+[1.0, 1.0][0]/2.0, 0),
         ori=1.0, pos=[0,0], anchor='center',
         lineWidth=3.0,     colorSpace='rgb',  lineColor=[-1.0000, -1.0000, 1.0000], fillColor=[-1.0000, -1.0000, 1.0000],
-        opacity=None, depth=-1.0, interpolate=True)
+        opacity=None, depth=-2.0, interpolate=True)
     redline = visual.Line(
         win=win, name='redline',
         start=(-[1.0, 1.0][0]/2.0, 0), end=(+[1.0, 1.0][0]/2.0, 0),
         ori=1.0, pos=[0,0], anchor='center',
         lineWidth=3.0,     colorSpace='rgb',  lineColor=[1.0000, -1.0000, -1.0000], fillColor=[1.0000, -1.0000, -1.0000],
-        opacity=None, depth=-2.0, interpolate=True)
+        opacity=None, depth=-3.0, interpolate=True)
     button_L = visual.TextStim(win=win, name='button_L',
         text='Press 1 and 2 to\nrotate the BLUE line.',
         font='Open Sans',
         pos=(-0.3, -0.4), height=0.025, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-3.0);
+        depth=-4.0);
     button_R = visual.TextStim(win=win, name='button_R',
         text='Press ENTER when\nthe lines look parallel.',
         font='Open Sans',
         pos=(0.3, -0.4), height=0.025, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-4.0);
+        depth=-5.0);
     buttons_center = visual.ImageStim(
         win=win,
         name='buttons_center', 
@@ -355,7 +356,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         ori=0.0, pos=(0, -0.4), size=None,
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=-5.0)
+        texRes=128.0, interpolate=True, depth=-6.0)
     
     # --- Initialize components for Routine "end" ---
     bye = visual.TextStim(win=win, name='bye',
@@ -496,6 +497,9 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # --- Prepare to start Routine "plot_trials" ---
         continueRoutine = True
         # update component parameters for each repeat
+        key_resp.keys = []
+        key_resp.rt = []
+        _key_resp_allKeys = []
         thisExp.addData('plot_trials.started', globalClock.getTime())
         # Run 'Begin Routine' code from code
         #no really, hide the mouse
@@ -507,7 +511,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         redline.setSize((0.075, 0))
         redline.setOri(RedOri)
         # keep track of which components have finished
-        plot_trialsComponents = [blueline, redline, button_L, button_R, buttons_center]
+        plot_trialsComponents = [key_resp, blueline, redline, button_L, button_R, buttons_center]
         for thisComponent in plot_trialsComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -529,17 +533,40 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            
+            # *key_resp* updates
+            waitOnFlip = False
+            
+            # if key_resp is starting this frame...
+            if key_resp.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                key_resp.frameNStart = frameN  # exact frame index
+                key_resp.tStart = t  # local t and not account for scr refresh
+                key_resp.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(key_resp, 'tStartRefresh')  # time at next scr refresh
+                # update status
+                key_resp.status = STARTED
+                # keyboard checking is just starting
+                waitOnFlip = True
+                win.callOnFlip(key_resp.clock.reset)  # t=0 on next screen flip
+                win.callOnFlip(key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+            if key_resp.status == STARTED and not waitOnFlip:
+                theseKeys = key_resp.getKeys(keyList=None, ignoreKeys=["escape"], waitRelease=False)
+                _key_resp_allKeys.extend(theseKeys)
+                if len(_key_resp_allKeys):
+                    key_resp.keys = [key.name for key in _key_resp_allKeys]  # storing all keys
+                    key_resp.rt = [key.rt for key in _key_resp_allKeys]
+                    key_resp.duration = [key.duration for key in _key_resp_allKeys]
             # Run 'Each Frame' code from code
             #get current response
             resp = event.getKeys(['1','2','return'])
             
+            #move lines
             if len(resp):
                 if resp[0] == '1':
                     blueline.setOri(Angle,'-')
-                    
                 elif resp[0] == '2':
                     blueline.setOri(Angle,'+')
-                    
                 elif resp[0] == 'return':
                     thisExp.addData('final_orientation', blueline.ori)
                     continueRoutine = False
@@ -659,8 +686,16 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in plot_trialsComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
+        # check responses
+        if key_resp.keys in ['', [], None]:  # No response was made
+            key_resp.keys = None
+        trials.addData('key_resp.keys',key_resp.keys)
+        if key_resp.keys != None:  # we had a response
+            trials.addData('key_resp.rt', key_resp.rt)
+            trials.addData('key_resp.duration', key_resp.duration)
         thisExp.addData('plot_trials.stopped', globalClock.getTime())
         # Run 'End Routine' code from code
+        # score trial
         if blueline.ori % 180 == RedOri % 180:
             thisExp.addData('corrAns', '1')
         else:
