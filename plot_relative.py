@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on November 01, 2023, at 17:10
+    on November 01, 2023, at 18:43
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -313,7 +313,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     ready = visual.TextStim(win=win, name='ready',
         text='Get ready!',
         font='Open Sans',
-        pos=(0, 0), height=0.03, wrapWidth=None, ori=0.0, 
+        pos=(0, 0), height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
@@ -338,14 +338,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     button_L = visual.TextStim(win=win, name='button_L',
         text='Press 1 and 2 to\nrotate the BLUE line.',
         font='Open Sans',
-        pos=(-0.3, -0.4), height=0.025, wrapWidth=None, ori=0.0, 
+        pos=(-0.5, -0.4), height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-4.0);
     button_R = visual.TextStim(win=win, name='button_R',
         text='Press ENTER when\nthe lines look parallel.',
         font='Open Sans',
-        pos=(0.3, -0.4), height=0.025, wrapWidth=None, ori=0.0, 
+        pos=(0.5, -0.4), height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-5.0);
@@ -362,7 +362,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     bye = visual.TextStim(win=win, name='bye',
         text='You have completed the task :)',
         font='Open Sans',
-        pos=(0, 0), height=0.03, wrapWidth=None, ori=0.0, 
+        pos=(0, 0), height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
@@ -497,10 +497,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         # --- Prepare to start Routine "plot_trials" ---
         continueRoutine = True
         # update component parameters for each repeat
+        thisExp.addData('plot_trials.started', globalClock.getTime())
         key_resp.keys = []
         key_resp.rt = []
         _key_resp_allKeys = []
-        thisExp.addData('plot_trials.started', globalClock.getTime())
         # Run 'Begin Routine' code from code
         #no really, hide the mouse
         win.mouseVisible = False
@@ -508,7 +508,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         blueline.setSize((BlueLengthx, 0))
         blueline.setOri(BlueOri)
         redline.setPos((Redx, Redy))
-        redline.setSize((0.075, 0))
+        redline.setSize((0.1, 0))
         redline.setOri(RedOri)
         # keep track of which components have finished
         plot_trialsComponents = [key_resp, blueline, redline, button_L, button_R, buttons_center]
@@ -686,6 +686,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         for thisComponent in plot_trialsComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
+        thisExp.addData('plot_trials.stopped', globalClock.getTime())
         # check responses
         if key_resp.keys in ['', [], None]:  # No response was made
             key_resp.keys = None
@@ -693,7 +694,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if key_resp.keys != None:  # we had a response
             trials.addData('key_resp.rt', key_resp.rt)
             trials.addData('key_resp.duration', key_resp.duration)
-        thisExp.addData('plot_trials.stopped', globalClock.getTime())
         # Run 'End Routine' code from code
         # score trial
         if blueline.ori % 180 == RedOri % 180:

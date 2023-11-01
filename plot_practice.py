@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on November 01, 2023, at 14:35
+    on November 01, 2023, at 18:43
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -106,7 +106,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\Silver\\Box\\psychopy_git_masters\\PLOT_relative\\plot_practice.py',
+        originPath='C:\\Users\\Silver\\Box\\psychopy_git_masters\\PLOT_scan\\plot_practice.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -362,14 +362,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     button_L = visual.TextStim(win=win, name='button_L',
         text='Press 1 and 2 to\nrotate the BLUE line.',
         font='Open Sans',
-        pos=(-0.3, -0.4), height=0.025, wrapWidth=None, ori=0.0, 
+        pos=(-0.5, -0.4), height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-5.0);
     button_R = visual.TextStim(win=win, name='button_R',
         text='Press ENTER when\nthe lines look parallel.',
         font='Open Sans',
-        pos=(0.3, -0.4), height=0.025, wrapWidth=None, ori=0.0, 
+        pos=(0.5, -0.4), height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-6.0);
@@ -384,7 +384,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     paralleltext = visual.TextStim(win=win, name='paralleltext',
         text='See how the lines are parallel?',
         font='Open Sans',
-        pos=(0, 2), height=0.025, wrapWidth=None, ori=0.0, 
+        pos=(0, 2), height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-8.0);
@@ -394,7 +394,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     text = visual.TextStim(win=win, name='text',
         text='GOOD JOB!',
         font='Open Sans',
-        pos=(0, 0), height=0.025, wrapWidth=None, ori=0.0, 
+        pos=(0, 0), height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
@@ -427,14 +427,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     button_L_2 = visual.TextStim(win=win, name='button_L_2',
         text='Press 1 and 2 to\nrotate the BLUE line.',
         font='Open Sans',
-        pos=(-0.3, -0.4), height=0.025, wrapWidth=None, ori=0.0, 
+        pos=(-0.5, -0.4), height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-5.0);
     button_R_2 = visual.TextStim(win=win, name='button_R_2',
         text='Press ENTER when\nthe lines look parallel.',
         font='Open Sans',
-        pos=(0.3, -0.4), height=0.025, wrapWidth=None, ori=0.0, 
+        pos=(0.5, -0.4), height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-6.0);
@@ -449,7 +449,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     paralleltext_2 = visual.TextStim(win=win, name='paralleltext_2',
         text='See how the lines are parallel?',
         font='Open Sans',
-        pos=(0, 2), height=0.025, wrapWidth=None, ori=0.0, 
+        pos=(0, 2), height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-8.0);
@@ -459,7 +459,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     text = visual.TextStim(win=win, name='text',
         text='GOOD JOB!',
         font='Open Sans',
-        pos=(0, 0), height=0.025, wrapWidth=None, ori=0.0, 
+        pos=(0, 0), height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
@@ -492,14 +492,14 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     button_L_3 = visual.TextStim(win=win, name='button_L_3',
         text='Press 1 and 2 to\nrotate the BLUE line.',
         font='Open Sans',
-        pos=(-0.3, -0.4), height=0.025, wrapWidth=None, ori=0.0, 
+        pos=(-0.5, -0.4), height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-5.0);
     button_R_3 = visual.TextStim(win=win, name='button_R_3',
         text='Press ENTER when\nthe lines look parallel.',
         font='Open Sans',
-        pos=(0.3, -0.4), height=0.025, wrapWidth=None, ori=0.0, 
+        pos=(0.5, -0.4), height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-6.0);
@@ -514,7 +514,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     paralleltext_3 = visual.TextStim(win=win, name='paralleltext_3',
         text='See how the lines are parallel?',
         font='Open Sans',
-        pos=(0, 2), height=0.025, wrapWidth=None, ori=0.0, 
+        pos=(0, 2), height=0.04, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-8.0);
@@ -753,24 +753,24 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # --- Prepare to start Routine "practice1" ---
     continueRoutine = True
     # update component parameters for each repeat
+    thisExp.addData('practice1.started', globalClock.getTime())
     # Run 'Begin Routine' code from code
     #no really, hide the mouse
     win.mouseVisible = False
     
     #set corrans
     corrans = [120, -60, -240, 300]
-    thisExp.addData('practice1.started', globalClock.getTime())
     blueline.setPos((0.4, 0.3))
-    blueline.setSize((0.075, 0))
+    blueline.setSize((0.1, 0))
     blueline.setOri(-120.0)
     blue_correct.setPos((0.4, 0.3))
-    blue_correct.setSize((0.1, 0))
+    blue_correct.setSize((0.12, 0))
     blue_correct.setOri(120.0)
     redline.setPos((-0.4, 0.3))
-    redline.setSize((0.075, 0))
+    redline.setSize((0.1, 0))
     redline.setOri(120.0)
     red_correct.setPos((-0.4, 0.3))
-    red_correct.setSize((0.1, 0))
+    red_correct.setSize((0.12, 0))
     red_correct.setOri(120.0)
     key_resp.keys = []
     key_resp.rt = []
@@ -1131,16 +1131,16 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     #set corrans
     corrans = [80, 260, -100, -280]
     blueline_2.setPos((0.3, 0.3))
-    blueline_2.setSize((0.075, 0))
+    blueline_2.setSize((0.1, 0))
     blueline_2.setOri(100.0)
     blue_correct_2.setPos((0.3, 0.3))
-    blue_correct_2.setSize((0.1, 0))
+    blue_correct_2.setSize((0.12, 0))
     blue_correct_2.setOri(80.0)
     redline_2.setPos((-0.2, 0.1))
-    redline_2.setSize((0.075, 0))
+    redline_2.setSize((0.1, 0))
     redline_2.setOri(80.0)
     red_correct_2.setPos((-0.2, 0.1))
-    red_correct_2.setSize((0.1, 0))
+    red_correct_2.setSize((0.12, 0))
     red_correct_2.setOri(80.0)
     key_resp_2.keys = []
     key_resp_2.rt = []
@@ -1501,16 +1501,16 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     #set corrans
     corrans = [140, -40, -220, 320]
     blueline_3.setPos((-0.35, -0.15))
-    blueline_3.setSize((0.075, 0))
+    blueline_3.setSize((0.1, 0))
     blueline_3.setOri(90.0)
     blue_correct_3.setPos((-0.35, -0.15))
-    blue_correct_3.setSize((0.1, 0))
+    blue_correct_3.setSize((0.12, 0))
     blue_correct_3.setOri(140.0)
     redline_3.setPos((0.4, -.15))
-    redline_3.setSize((0.075, 0))
+    redline_3.setSize((0.1, 0))
     redline_3.setOri(140.0)
     red_correct_3.setPos((0.4, -.15))
-    red_correct_3.setSize((0.1, 0))
+    red_correct_3.setSize((0.12, 0))
     red_correct_3.setOri(140.0)
     key_resp_3.keys = []
     key_resp_3.rt = []
