@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.3),
-    on November 01, 2023, at 18:43
+    on November 02, 2023, at 17:16
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -760,16 +760,16 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     #set corrans
     corrans = [120, -60, -240, 300]
-    blueline.setPos((0.4, 0.3))
+    blueline.setPos((0.4, 0.4))
     blueline.setSize((0.1, 0))
     blueline.setOri(-120.0)
-    blue_correct.setPos((0.4, 0.3))
+    blue_correct.setPos((0.4, 0.4))
     blue_correct.setSize((0.12, 0))
     blue_correct.setOri(120.0)
-    redline.setPos((-0.4, 0.3))
+    redline.setPos((-0.4, 0.4))
     redline.setSize((0.1, 0))
     redline.setOri(120.0)
-    red_correct.setPos((-0.4, 0.3))
+    red_correct.setPos((-0.4, 0.4))
     red_correct.setSize((0.12, 0))
     red_correct.setOri(120.0)
     key_resp.keys = []
@@ -1020,14 +1020,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     thisExp.addData('practice1.stopped', globalClock.getTime())
-    # check responses
-    if key_resp.keys in ['', [], None]:  # No response was made
-        key_resp.keys = None
-    thisExp.addData('key_resp.keys',key_resp.keys)
-    if key_resp.keys != None:  # we had a response
-        thisExp.addData('key_resp.rt', key_resp.rt)
-        thisExp.addData('key_resp.duration', key_resp.duration)
-    thisExp.nextEntry()
     # the Routine "practice1" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -1136,10 +1128,10 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     blue_correct_2.setPos((0.3, 0.3))
     blue_correct_2.setSize((0.12, 0))
     blue_correct_2.setOri(80.0)
-    redline_2.setPos((-0.2, 0.1))
+    redline_2.setPos((-0.3, -0.2))
     redline_2.setSize((0.1, 0))
     redline_2.setOri(80.0)
-    red_correct_2.setPos((-0.2, 0.1))
+    red_correct_2.setPos((-0.3, -0.2))
     red_correct_2.setSize((0.12, 0))
     red_correct_2.setOri(80.0)
     key_resp_2.keys = []
@@ -1390,14 +1382,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     thisExp.addData('practice2.stopped', globalClock.getTime())
-    # check responses
-    if key_resp_2.keys in ['', [], None]:  # No response was made
-        key_resp_2.keys = None
-    thisExp.addData('key_resp_2.keys',key_resp_2.keys)
-    if key_resp_2.keys != None:  # we had a response
-        thisExp.addData('key_resp_2.rt', key_resp_2.rt)
-        thisExp.addData('key_resp_2.duration', key_resp_2.duration)
-    thisExp.nextEntry()
     # the Routine "practice2" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
@@ -1500,16 +1484,16 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     
     #set corrans
     corrans = [140, -40, -220, 320]
-    blueline_3.setPos((-0.35, -0.15))
-    blueline_3.setSize((0.1, 0))
+    blueline_3.setPos((-0.4, -0.2))
+    blueline_3.setSize((0.033, 0))
     blueline_3.setOri(90.0)
-    blue_correct_3.setPos((-0.35, -0.15))
+    blue_correct_3.setPos((-0.4, -0.2))
     blue_correct_3.setSize((0.12, 0))
     blue_correct_3.setOri(140.0)
-    redline_3.setPos((0.4, -.15))
+    redline_3.setPos((0.4, -0.2))
     redline_3.setSize((0.1, 0))
     redline_3.setOri(140.0)
-    red_correct_3.setPos((0.4, -.15))
+    red_correct_3.setPos((0.4, -0.2))
     red_correct_3.setSize((0.12, 0))
     red_correct_3.setOri(140.0)
     key_resp_3.keys = []
@@ -1760,14 +1744,6 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     thisExp.addData('practice3.stopped', globalClock.getTime())
-    # check responses
-    if key_resp_3.keys in ['', [], None]:  # No response was made
-        key_resp_3.keys = None
-    thisExp.addData('key_resp_3.keys',key_resp_3.keys)
-    if key_resp_3.keys != None:  # we had a response
-        thisExp.addData('key_resp_3.rt', key_resp_3.rt)
-        thisExp.addData('key_resp_3.duration', key_resp_3.duration)
-    thisExp.nextEntry()
     # the Routine "practice3" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
